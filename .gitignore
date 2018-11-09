@@ -1,0 +1,12 @@
+build
+bin
+
+*.fir
+*.anno.json
+
+project
+target
+
+.classpath
+.project
+.pydevproject

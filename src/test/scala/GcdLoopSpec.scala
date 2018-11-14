@@ -33,7 +33,7 @@ class GcdLoopTester(c: Gcd) extends PeekPokeTester(c)  {
 }
 
 class GcdLoopSpec extends FlatSpec with Matchers {
-  behavior of "GCDSpec"
+  behavior of "Gcd"
 
   it should "compute gcd" in {
     Driver.execute(() => new Gcd(32), new TesterOptionsManager) { c =>

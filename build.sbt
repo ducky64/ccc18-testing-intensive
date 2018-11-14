@@ -14,8 +14,6 @@ resolvers ++= Seq(
   Resolver.sonatypeRepo("releases")
 )
 
-libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.13.4" % "test"
-
 libraryDependencies += "edu.berkeley.cs" %% "chisel3" % "3.2-SNAPSHOT"
 libraryDependencies += "edu.berkeley.cs" %% "chisel-testers2" % "0.1-SNAPSHOT"
 libraryDependencies += "edu.berkeley.cs" %% "chisel-iotesters" % "1.2+"

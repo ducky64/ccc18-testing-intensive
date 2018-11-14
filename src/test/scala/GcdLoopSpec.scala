@@ -36,7 +36,7 @@ class GcdLoopSpec extends FlatSpec with Matchers {
   behavior of "Gcd"
 
   it should "compute gcd" in {
-    Driver.execute(() => new Gcd(32), new TesterOptionsManager) { c =>
+    Driver.execute(Array(), () => new Gcd(32)) { c =>
       new GcdLoopTester(c)
     } should be(true)
   }

@@ -34,7 +34,7 @@ class GcdScalaCheckSpec extends FlatSpec with GeneratorDrivenPropertyChecks with
     val inputInts = for (n <- Gen.choose(1, 256)) yield n
 
     forAll (inputInts, inputInts) { (a: Int, b: Int) =>
-      Driver.execute(() => new Gcd(32), new TesterOptionsManager) { c =>
+      Driver.execute(Array(), () => new Gcd(32)) { c =>
         new GcdParameterizedTester(c, a, b, gcd(a, b))
       } should be(true)
     }

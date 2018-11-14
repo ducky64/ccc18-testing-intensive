@@ -31,7 +31,9 @@ class GcdSpec extends FlatSpec with Matchers {
   behavior of "Gcd"
 
   it should "compute gcd" in {
-    Driver.execute(() => new Gcd(32), new TesterOptionsManager) { c =>
+    // This can alternatively be run with Verilator, which will dump VCDs by default
+//    Driver.execute(Array("--backend-name", "verilator"), () => new Gcd(32)) { c =>
+    Driver.execute(Array(), () => new Gcd(32)) { c =>
       new GcdTester(c)
     } should be(true)
   }

@@ -16,7 +16,7 @@ class GcdTester(c: Gcd) extends PeekPokeTester(c)  {
   // Wait for output ready
   while (peek(c.io.out.valid) == 0) {
     // Since this code runs in lockstep with simulation, we can have it print out peeked values
-    println(s"out.valid=${peek(c.io.out.valid)}  out.bits=${peek(c.io.out.bits)}")
+//    println(s"out.valid=${peek(c.io.out.valid)}  out.bits=${peek(c.io.out.bits)}")
     step(1)
   }
 

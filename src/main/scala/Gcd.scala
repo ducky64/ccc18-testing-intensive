@@ -15,8 +15,11 @@ class Gcd(width: Int) extends Module {
   val x = RegInit(0.U(width.W))
   val y = Reg(UInt(width.W))
 
-  when (x > y)   { x := x -% y }
-  .otherwise     { y := y -% x }
+  when (x > y) {
+    x := x -% y
+  } .otherwise {
+    y := y -% x
+  }
 
   when (io.in.valid) { x := io.in.bits.a; y := io.in.bits.b }
   io.out.bits := x
